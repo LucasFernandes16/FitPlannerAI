@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Treino Gerado - FitLife Planner AI</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Treino Gerado para {{ user.name }}</h1>
+    <p>Idade: {{ user.age }} anos | Dias disponíveis: {{ user.days_available }}</p>
+
+    <h2>Seu Plano de Treino:</h2>
+    <ul>
+        {% for workout in workout_plan %}
+        <li>{{ workout }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Voltar</a>
+</div>
+{% endblock %}
